@@ -8,27 +8,46 @@ body {
   font-family: 'montseratt', sans-serif;
 }
 
-.app {
+.main {
+  display: flex;
+}
+
+.search-box {
+  flex: 0.5;
+  border: 2px solid green;
+}
+
+.weather-box {
+  flex: 1;
+  border: 2px solid pink;
+  margin-left: 20px;
+}
+
+.searchs-box:first-child {
+  margin: 100px;
+}
+
+/* .app {
   background-image: url('./assets/cold-bk.png');
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
-}
+} */
 
-.app.warm {
+/* .app.warm {
   background-image: url('./assets/warm-bk.jpg');
-}
+} */
 
 main {
   min-height: 100vh;
   padding: 25px;
 }
 
-.search-box {
+/* .search-box {
   width: 100%;
-}
+} */
 
-.search-box .search-bar {
+/* .search-box .search-bar {
   display: block;
   width: 100%;
   padding: 15px;
@@ -39,4 +58,4 @@ main {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 40px;
   margin-top: -25px;
-}
+} */

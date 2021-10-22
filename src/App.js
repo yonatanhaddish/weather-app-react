@@ -9,9 +9,13 @@ const api= {
 function App() {
   return (
     <div className="app">
-      <main>
+      <main className="main">
         <div className="search-box">
+          <h1>Weather App</h1>
           <input type="text" className="search-bar" placeholder="Search..."></input>
+        </div>
+        <div className="weather-box">
+          <h2>Hello World!</h2>
         </div>
       </main>
     </div>
@@ -19,6 +23,3 @@ function App() {
 }
 
 export default App;
-
-// https://api.openweathermap.org/data/2.5/
-// https://api.openweathermap.org/data/2.5/forecast?q= +toronto+ "&units=metric&appid=5bb216c75f6edf82eda28a4bb30b0263
