@@ -24,23 +24,23 @@ function App() {
           <div className="forecast-weather">
             <div className="day" id="day01">
               <div className="date01">Oct 23</div>
-              <div className="temp01">6°c</div>
+              <div className="temp">6°c</div>
             </div>
             <div className="day" id="day02">
-              <div className="date02">Oct 24</div>
-              <div className="temp02">5°c</div>
+              <div className="date01">Oct 24</div>
+              <div className="temp">5°c</div>
             </div>
             <div className="day" id="day03">
               <div className="date01">Oct 25</div>
-              <div className="temp01">16°c</div>
+              <div className="temp">16°c</div>
             </div>
             <div className="day" id="day04">
               <div className="date01">Oct 26</div>
-              <div className="temp01">9°c</div>
+              <div className="temp">9°c</div>
             </div>
             <div className="day" id="day05">
               <div className="date01">Oct 27</div>
-              <div className="temp01">5°c</div>
+              <div className="temp">5°c</div>
             </div>
           </div>
         </div>
