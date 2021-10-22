@@ -19,10 +19,33 @@ body {
 }
 
 .weather-box {
+  position: relative;
   flex: 1;
   border: 2px solid pink;
   margin-left: 20px;
   background-color: lightskyblue;
+}
+
+.current-weather {
+  position: absolute;
+  border: 2px solid red;
+  top: 0;
+  width: 100%;
+}
+
+.forecast-weather {
+  display: flex;
+  position: absolute;
+  border: 2px solid green;
+  bottom: 0;
+  width: 100%;
+}
+
+.day {
+  position: relative;
+  flex: 1;
+  border: 2px solid black;
+  width: 100%;
 }
 
 .searchs-box:first-child {
