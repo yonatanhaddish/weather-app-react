@@ -19,3 +19,6 @@ function App() {
 }
 
 export default App;
+
+// https://api.openweathermap.org/data/2.5/
+// https://api.openweathermap.org/data/2.5/forecast?q= +toronto+ "&units=metric&appid=5bb216c75f6edf82eda28a4bb30b0263
