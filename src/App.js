@@ -3,9 +3,7 @@ import './index.css';
 
 const api= {
   key: "024b218e0e36e7c1862ccdf5ffef9c30",
-  base: "https://api.openweathermap.org/data/2.5/forecast",
-  baset: "https://api.openweathermap.org/data/2.5/weather",
-  keyt: "5bb216c75f6edf82eda28a4bb30b0263"
+  base: "https://api.openweathermap.org/data/2.5/forecast"
 };
 
 
@@ -18,13 +16,15 @@ function App() {
     if (evt.key === "Enter") {
       fetch(`${api.base}?q=${query}&units=metric&appid=${api.key}`)
         .then(res => res.json())
-        .then(result => {
+        .then(data => {
           setQuery('');
-          setWeather(result);
-          console.log(result);
+          setWeather(data);
+          console.log(data.list[0]);
         })
     } 
   }
+  // console.log(data.city.name);
+
 
   return (
     <div className="app">
@@ -37,7 +37,7 @@ function App() {
         </div>
         <div className="weather-box">
           <div className="current-weather">
-            <div className="location">Toronto, CA</div>
+            <div className="location">{weather.name}</div>
             <div className="date">Friday 22 October 2021</div>
             <div className="temprature">6°c</div>
             <div className="status">Cloudy</div>
