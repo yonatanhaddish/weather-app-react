@@ -1,18 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
 const api= {
   key: "024b218e0e36e7c1862ccdf5ffef9c30",
-  base: "https://api.openweathermap.org/data/2.5/"
-}
+  base: "https://api.openweathermap.org/data/2.5/forecast",
+  baset: "https://api.openweathermap.org/data/2.5/weather",
+  keyt: "5bb216c75f6edf82eda28a4bb30b0263"
+};
+
 
 function App() {
+
+  const [query, setQuery]= useState('');
+  const [weather, setWeather]= useState({});
+
+  const search = evt => {
+    if (evt.key === "Enter") {
+      fetch(`${api.baset}?q=${query}&units=metric&appid=${api.keyt}`)
+        .then(res => res.json())
+        .then(result => setWeather(result));
+        setQuery('')
+        // console.log(query);
+    }
+    
+  }
+
   return (
     <div className="app">
       <main className="main">
         <div className="search-box">
           <h1>Weather App</h1>
-          <input type="text" className="search-bar" placeholder="Search..."></input>
+          <input type="text" className="search-bar" placeholder="Search..." 
+            onChange={e => setQuery(e.target.value)} value={query}
+              onKeyPress={search}></input>
         </div>
         <div className="weather-box">
           <div className="current-weather">
@@ -50,3 +70,5 @@ function App() {
 }
 
 export default App;
+
+// api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric&cnt=7&appid={API key}
