@@ -16,13 +16,14 @@ function App() {
 
   const search = evt => {
     if (evt.key === "Enter") {
-      fetch(`${api.baset}?q=${query}&units=metric&appid=${api.keyt}`)
+      fetch(`${api.base}?q=${query}&units=metric&appid=${api.key}`)
         .then(res => res.json())
-        .then(result => setWeather(result));
-        setQuery('')
-        // console.log(query);
-    }
-    
+        .then(result => {
+          setQuery('');
+          setWeather(result);
+          console.log(result);
+        })
+    } 
   }
 
   return (
