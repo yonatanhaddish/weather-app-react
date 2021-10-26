@@ -37,7 +37,7 @@ function App() {
         </div>
         <div className="weather-box">
           <div className="current-weather">
-            <div className="location">{weather.name}</div>
+            <div className="location">Toronto, CA</div>
             <div className="date">Friday 22 October 2021</div>
             <div className="temprature">6°c</div>
             <div className="status">Cloudy</div>
