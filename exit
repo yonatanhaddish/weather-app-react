@@ -1,0 +1,65 @@
+[33mcommit db9759fc6341eff13551895e7cb42bec9eaacc90[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Tue Oct 26 12:53:05 2021 -0400
+
+    some adjustments
+
+[33mcommit 091ced62f58acea1e181b4bd2f47fc8744c8589e[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Fri Oct 22 18:56:27 2021 -0400
+
+    fetching
+
+[33mcommit 25e72fc679c3351cae9d9a86b85bb7948484eeb0[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Fri Oct 22 17:41:50 2021 -0400
+
+    fetch from a third party success
+
+[33mcommit 44d1bf7fadb4bd28ffb65def3cceb2beccd3bb4e[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Fri Oct 22 17:30:48 2021 -0400
+
+    fetching from a third party weather api
+
+[33mcommit 7f58a55a72f62b1a2ed60525462cc07571d67f1c[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Fri Oct 22 15:21:34 2021 -0400
+
+    weather box styled and position adjusted
+
+[33mcommit f4e9bb734d804fc0efdc9aad04cde56777c0cca8[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Fri Oct 22 14:39:12 2021 -0400
+
+    forecast-weather section structured
+
+[33mcommit 1237279a95fd468358588e8b52373d0d1b4a4a3b[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Fri Oct 22 13:47:51 2021 -0400
+
+    search-box class styled
+
+[33mcommit 51426747ad5a6d41df5d230bbcfc080fe6fd79f1[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Fri Oct 22 11:39:10 2021 -0400
+
+    structure the front page
+
+[33mcommit b65b398490b445b5534be6d1a4afde6912113976[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Thu Oct 21 22:05:31 2021 -0400
+
+    styling
+
+[33mcommit e429bf2aa005a8009e9264b7a372ed9e9ed1bd46[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Thu Oct 21 20:43:28 2021 -0400
+
+    search area
+
+[33mcommit 0224c94f7e5fc428474944de4f7a1e639ebb6bd9[m
+Author: Yonatan Haddish <yonihailshn@gmail.com>
+Date:   Thu Oct 21 19:08:54 2021 -0400
+
+    initial startup
