@@ -39,7 +39,7 @@ function App() {
             onKeyPress={search}
           ></input>
         </div>
-        {(typeof weather.main == "undefined") ? (
+        {(typeof weather.list != "undefined") ? (
           <div>
             <div className="weather-box">
               <div className="current-weather">
@@ -72,11 +72,7 @@ function App() {
               </div>
             </div>
           </div>
-        ) : (
-          <div>
-            <div>{weather.city.name}</div>
-          </div>
-        )
+        ) : ('')
         }
       </main>
     </div>
