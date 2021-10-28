@@ -1,4 +1,4 @@
-// import moment from 'moment';
+import moment from 'moment';
 import React, { useState } from "react";
 import "./index.css";
 
@@ -18,7 +18,6 @@ function App() {
         .then((data) => {
           setWeather(data);
           setQuery("");
-
           console.log(data);
         });
     }
@@ -40,38 +39,38 @@ function App() {
           ></input>
         </div>
         {(typeof weather.list != "undefined") ? (
-          <div>
+          
             <div className="weather-box">
               <div className="current-weather">
                 <div className="location">{weather.city.name}</div>
-                <div className="date">llll</div>
-                <div className="temprature">44°c</div>
-                {/* <div className="status">{weather.city.country}</div> */}
+                <div className="date">{moment().format('LLLL')}</div>
+                <div className="temprature">{Math.round(weather.list[0].main.temp)}°c</div>
+                <div className="status">{weather.list[0].weather[0].main}</div>
               </div>
               <div className="forecast-weather">
                 <div className="day" id="day01">
-                  <div className="date01">Oct 23</div>
-                  {/* <div className="temp">{Math.round(weather.list[1].main.temp)}°c</div> */}
+                  <div className="date01">{moment().add(1, 'days').calendar()}</div>
+                  <div className="temp">{Math.round(weather.list[1].main.temp)}°c</div>
                 </div>
                 <div className="day" id="day02">
                   <div className="date01">Oct 24</div>
-                  {/* <div className="temp">{Math.round(weather.list[2].main.temp)}°c</div> */}
+                  <div className="temp">{Math.round(weather.list[2].main.temp)}°c</div>
                 </div>
                 <div className="day" id="day03">
                   <div className="date01">Oct 25</div>
-                  {/* <div className="temp">{Math.round(weather.list[3].main.temp)}°c</div> */}
+                  <div className="temp">{Math.round(weather.list[3].main.temp)}°c</div>
                 </div>
                 <div className="day" id="day04">
                   <div className="date01">Oct 26</div>
-                  {/* <div className="temp">{Math.round(weather.list[4].main.temp)}°c</div> */}
+                  <div className="temp">{Math.round(weather.list[4].main.temp)}°c</div>
                 </div>
                 <div className="day" id="day05">
                   <div className="date01">Oct 27</div>
-                  {/* <div className="temp">{Math.round(weather.list[5].main.temp)}°c</div> */}
+                  <div className="temp">{Math.round(weather.list[5].main.temp)}°c</div>
                 </div>
               </div>
             </div>
-          </div>
+          
         ) : ('')
         }
       </main>
