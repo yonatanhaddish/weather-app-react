@@ -49,24 +49,24 @@ function App() {
               </div>
               <div className="forecast-weather">
                 <div className="day" id="day01">
-                  <div className="date01">{moment().add(1, 'days').calendar()}</div>
-                  <div className="temp">{Math.round(weather.list[1].main.temp)}°c</div>
-                </div>
-                <div className="day" id="day02">
-                  <div className="date01">Oct 24</div>
-                  <div className="temp">{Math.round(weather.list[2].main.temp)}°c</div>
-                </div>
-                <div className="day" id="day03">
-                  <div className="date01">Oct 25</div>
-                  <div className="temp">{Math.round(weather.list[3].main.temp)}°c</div>
-                </div>
-                <div className="day" id="day04">
-                  <div className="date01">Oct 26</div>
+                  <div className="date01">{moment.unix(weather.list[4].dt).format("ll")}</div>
                   <div className="temp">{Math.round(weather.list[4].main.temp)}°c</div>
                 </div>
+                <div className="day" id="day02">
+                  <div className="date01">{moment.unix(weather.list[12].dt).format("lll")}</div>
+                  <div className="temp">{Math.round(weather.list[12].main.temp)}°c</div>
+                </div>
+                <div className="day" id="day03">
+                  <div className="date01">{moment.unix(weather.list[20].dt).format("lll")}</div>
+                  <div className="temp">{Math.round(weather.list[20].main.temp)}°c</div>
+                </div>
+                <div className="day" id="day04">
+                  <div className="date01">{moment.unix(weather.list[28].dt).format("lll")}</div>
+                  <div className="temp">{Math.round(weather.list[28].main.temp)}°c</div>
+                </div>
                 <div className="day" id="day05">
-                  <div className="date01">Oct 27</div>
-                  <div className="temp">{Math.round(weather.list[5].main.temp)}°c</div>
+                  <div className="date01">{moment.unix(weather.list[36].dt).format("lll")}</div>
+                  <div className="temp">{Math.round(weather.list[36].main.temp)}°c</div>
                 </div>
               </div>
             </div>
