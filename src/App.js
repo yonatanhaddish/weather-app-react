@@ -1,4 +1,4 @@
-import moment from 'moment';
+import moment from "moment";
 import React, { useState } from "react";
 import "./index.css";
 
@@ -19,6 +19,10 @@ function App() {
           setWeather(data);
           setQuery("");
           console.log(data);
+        })
+        .catch(function() {
+          console.log('error');
+          alert("error");
         });
     }
   };
@@ -38,41 +42,62 @@ function App() {
             onKeyPress={search}
           ></input>
         </div>
-        {(typeof weather.list != "undefined") ? (
-          
-            <div className="weather-box">
-              <div className="current-weather">
-                <div className="location">{weather.city.name}</div>
-                <div className="date">{moment().format('LLLL')}</div>
-                <div className="temprature">{Math.round(weather.list[0].main.temp)}°c</div>
-                <div className="status">{weather.list[0].weather[0].main}</div>
+        {typeof weather.list != "undefined" ? (
+          <div className="weather-box">
+            <div className="current-weather">
+              <div className="location">{weather.city.name}, {weather.city.country}</div>
+              <div className="date">{moment().format("LL")}</div>
+              <div className="temprature">
+                {Math.round(weather.list[0].main.temp)}°c
               </div>
-              <div className="forecast-weather">
-                <div className="day" id="day01">
-                  <div className="date01">{moment.unix(weather.list[4].dt).format("ll")}</div>
-                  <div className="temp">{Math.round(weather.list[4].main.temp)}°c</div>
+              <div className="status">{weather.list[0].weather[0].main}</div>
+            </div>
+            <div className="forecast-weather">
+              <div className="day" id="day01">
+                <div className="date01">
+                  {moment.unix(weather.list[4].dt).format("dddd")}
                 </div>
-                <div className="day" id="day02">
-                  <div className="date01">{moment.unix(weather.list[12].dt).format("lll")}</div>
-                  <div className="temp">{Math.round(weather.list[12].main.temp)}°c</div>
+                <div className="temp">
+                  {Math.round(weather.list[4].main.temp)}°c
                 </div>
-                <div className="day" id="day03">
-                  <div className="date01">{moment.unix(weather.list[20].dt).format("lll")}</div>
-                  <div className="temp">{Math.round(weather.list[20].main.temp)}°c</div>
+              </div>
+              <div className="day" id="day02">
+                <div className="date01">
+                  {moment.unix(weather.list[12].dt).format("dddd")}
                 </div>
-                <div className="day" id="day04">
-                  <div className="date01">{moment.unix(weather.list[28].dt).format("lll")}</div>
-                  <div className="temp">{Math.round(weather.list[28].main.temp)}°c</div>
+                <div className="temp">
+                  {Math.round(weather.list[12].main.temp)}°c
                 </div>
-                <div className="day" id="day05">
-                  <div className="date01">{moment.unix(weather.list[36].dt).format("lll")}</div>
-                  <div className="temp">{Math.round(weather.list[36].main.temp)}°c</div>
+              </div>
+              <div className="day" id="day03">
+                <div className="date01">
+                  {moment.unix(weather.list[20].dt).format("dddd")}
+                </div>
+                <div className="temp">
+                  {Math.round(weather.list[20].main.temp)}°c
+                </div>
+              </div>
+              <div className="day" id="day04">
+                <div className="date01">
+                  {moment.unix(weather.list[28].dt).format("dddd")}
+                </div>
+                <div className="temp">
+                  {Math.round(weather.list[28].main.temp)}°c
+                </div>
+              </div>
+              <div className="day" id="day05">
+                <div className="date01">
+                  {moment.unix(weather.list[36].dt).format("dddd")}
+                </div>
+                <div className="temp">
+                  {Math.round(weather.list[36].main.temp)}°c
                 </div>
               </div>
             </div>
-          
-        ) : ('')
-        }
+          </div>
+        ) : (
+          ""
+        )}
       </main>
     </div>
   );
@@ -80,4 +105,3 @@ function App() {
 
 export default App;
 
-// api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric&cnt=7&appid={API key}
